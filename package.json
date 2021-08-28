@@ -1,0 +1,22 @@
+{
+  "name": "address_book_wtw",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "bdd-lazy-var": "^2.6.1",
+    "chai": "^4.3.4",
+    "cypress": "^8.3.1",
+    "mocha": "^9.1.1",
+    "sinon": "^11.1.2",
+    "sinon-chai": "^3.7.0",
+    "start-server-and-test": "^1.13.1",
+    "superstatic": "^7.1.0"
+  },
+  "scripts": {
+    "start": "superstatic src --port 3000",
+    "test": "mocha --file specs/specHelper.js -u bdd-lazy-var/global --recursive --exit specs/units",
+    "cy:open": "cypress open",
+    "cypress": "start-server-and-test start http://localhost:3000 cy:open"
+  }
+}
